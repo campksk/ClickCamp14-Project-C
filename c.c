@@ -3,7 +3,7 @@
 #include <string.h>
 
 int mm, yy, dd = 31, c[31];
-char menu[10], event_name[50][32][32];
+char menu[10], event_name[50][32][32], time[12][32][32];
 //สร้างปฏิทิน
 int calendar()
 {
@@ -50,7 +50,7 @@ int de_day(int show_day)
     
     for (int i = 0; i < c[show_day]; i++)
     {
-        printf("%s\n", event_name[i][show_day]);
+        printf("%s\t%s\n", event_name[i][show_day], time[i][show_day]);
     }
 }
 
@@ -72,11 +72,12 @@ int planner()
     de_day(edit_day);
     do
     {
-        printf("\nAdd your event (if what back enter stop) :");
+        printf("\nAdd your event(format: nameevent HH:MM) (if what stop enter back) :");
         char want_add[50];
         scanf("%s", &want_add);
         if (strcmp(want_add, "back") == 0) break;
         strcpy(event_name[c[edit_day]][edit_day], want_add);
+        scanf("%s", &time[c[edit_day]][edit_day]);
         c[edit_day]++;
         printf("Added\n");
         
@@ -103,6 +104,7 @@ int day()
 
 int main()
 {
+    system("cls");
     int count=0;
     char name[50]="ClickCamp14_Project";
     int length_name = strlen(name);
@@ -123,7 +125,7 @@ int main()
         }
         printf("\n");
     }
-
+    printf("\n");
     
 
     do 
