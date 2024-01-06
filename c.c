@@ -57,8 +57,18 @@ int de_day(int show_day)
 int planner()
 {
     int edit_day;
-    printf("choose day : ");
-    scanf("%d", &edit_day);
+    do
+    {
+        printf("choose day : ");
+        scanf("%d", &edit_day);
+        if (!(edit_day <= 31 && edit_day >= 1))
+        {
+            printf("Enter not correct\n");
+        }
+        
+    } while (!(edit_day <= 31 && edit_day >= 1));
+
+    
     de_day(edit_day);
     do
     {
@@ -78,8 +88,16 @@ int planner()
 int day()
 {
     int do_day;
-    printf("choose day : ");
-    scanf("%d", &do_day);
+    do
+    {
+        printf("choose day : ");
+        scanf("%d", &do_day);
+        if (!(do_day <= 31 && do_day >= 1))
+        {
+            printf("Enter not correct\n");
+        }
+        
+    } while (!(do_day <= 31 && do_day >= 1));
     de_day(do_day);
 }
 
