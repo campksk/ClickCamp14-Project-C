@@ -106,16 +106,16 @@ int main()
         printf("\n");
     }
 
-    calendar();
+    
 
     do 
     {
-        printf("\nc = Calendar\np = Planner\nd = Detail in day\nq = Quit\n");
+        calendar();
+        printf("\np = Planner\nd = Detail in day\nq = Quit\n");
         printf("\nEnter : ");
         scanf("%s", menu);
         system("cls");
-        if (strcmp(menu, "c") == 0 || strcmp(menu, "C") == 0) calendar();
-        else if (strcmp(menu, "p" || strcmp(menu, "P") == 0) == 0) planner();
+        if (strcmp(menu, "p") == 0 || strcmp(menu, "P") == 0) planner();
         else if (strcmp(menu, "d") == 0 || strcmp(menu, "D") == 0) day();
         else if (strcmp(menu, "q") == 0 || strcmp(menu, "Q") == 0) break;
         else printf("Select error\n");
@@ -124,6 +124,16 @@ int main()
 
     system("cls");
     printf("Click Camp 14\nKritsakon Aeknok (Camp)\nPolrapat Roemraksachaikul (Pun)\nJiravasin Jantavongvaich (Music)");
+    printf("\n\n _______   __\n");
+    printf("/       \\ /  |\n");
+    printf("$$$$$$$  |$$ |  ______   _______   _______    ______    ______\n");
+    printf("$$ |__$$ |$$ | /      \\ /       \\ /       \\  /      \\  /      \\\n");
+    printf("$$    $$/ $$ | $$$$$$  |$$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |\n");
+    printf("$$$$$$$/  $$ | /    $$ |$$ |  $$ |$$ |  $$ |$$    $$ |$$ |  $$ | \n");
+    printf("$$ |      $$ |/$$$$$$$ |$$ |  $$ |$$ |  $$ |$$$$$$$$/ $$ |      \n");
+    printf("$$ |      $$ |$$    $$ |$$ |  $$ |$$ |  $$ |$$       |$$ | \n");
+    printf("$$/       $$/  $$$$$$$/ $$/   $$/ $$/   $$/  $$$$$$$/ $$/        Advice by P\'Atom\n");
+
 
     return 0;
 }
